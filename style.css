@@ -1,0 +1,16 @@
+body {
+	box-sizing: border-box;
+}
+
+.completed {
+	border: 1px solid #28a745;
+}
+
+.completed .ready-btn {
+	background-color: #28a745;
+	color: #fff;
+}
+
+.deleted {
+	border: 1px solid red;
+}

@@ -173,6 +173,7 @@ const tasks = [
 	function onDeleteHandler({ target } = {}) {
 		if (target.classList.contains('delete-btn')) {
 			const parent = target.closest('[data-task-id]');
+
 			const id = parent.dataset.taskId;
 			const confirmed = deleteTask(id);
 
@@ -183,12 +184,8 @@ const tasks = [
 	function onReadyHandler({ target } = {}) {
 		if (target.classList.contains('ready-btn')) {
 			const parent = target.closest('[data-task-id]');
-			parent.classList.toggle('completed');
-			if (parent.classList.contains('completed')) {
-				target.classList.remove('btn-outline-success');
-				target.classList.add('btn-success');
-				target.textContent = 'Done!'
-			}
+			const completed = parent.classList.toggle('completed');
+			target.textContent = (completed) ? 'Done!' : 'Ready';
 		}
 	}
 
