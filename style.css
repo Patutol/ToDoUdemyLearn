@@ -4,13 +4,10 @@ body {
 
 .completed {
 	border: 1px solid #28a745;
+	background-color: #28a7466e;
 }
 
 .completed .ready-btn {
 	background-color: #28a745;
 	color: #fff;
-}
-
-.deleted {
-	border: 1px solid red;
 }
